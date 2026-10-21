@@ -1,0 +1,18 @@
+[project]
+name = "luthien-slack-agent"
+version = "0.1.0"
+description = "Luthien's Slack agent: Claude Agent SDK + git-backed markdown memory + approval gate"
+requires-python = ">=3.11"
+dependencies = [
+    "claude-agent-sdk==0.2.165",
+    "slack-bolt==1.30.0",
+    "aiohttp>=3.9",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+pythonpath = ["."]
