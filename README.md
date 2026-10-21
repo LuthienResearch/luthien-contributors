@@ -8,6 +8,45 @@ Despite the name, this is not a private space for Luthien contributors: everythi
 
 **All actual Luthien context lives in a private repo, never here.** That means people, projects, customers, meeting notes, decisions, partner material and anything shared with us in confidence. The agent's memory ("the brain") is the private repo [LuthienResearch/luthien-brain](https://github.com/LuthienResearch/luthien-brain); [`brain-template/`](brain-template/) holds only its empty scaffolding. Secrets live in Bitwarden and macOS Keychain, never in git. If you're unsure whether something is context or internals, put it in the private repo.
 
+## Who can see what (access tiers)
+
+Each tier is defined by who can actually read it. Tiers nest: everyone in an inner tier can read everything in the outer ones. Before you file something, check that everyone in the tier may read it; if not, file it one tier further in.
+
+We run something like a two-team [Scaled Agile Framework](https://en.wikipedia.org/wiki/Scaled_agile_framework) setup: two teams with their own access, standups and repos, synced through one cross-team meeting that Scott runs.
+
+```mermaid
+flowchart TB
+  subgraph PUB["4. Public: anyone"]
+    subgraph LT["Team A: Luthien"]
+      subgraph T3["3. Contributors: anyone working with Luthien who isn't core team"]
+        subgraph T2["2. Core team"]
+          T1["1. Scott only"]
+        end
+      end
+    end
+    CT["Team B: Control Tower (Redwood Research and EquiStamp)"]
+    SYNC(["Control Tooling Sync: cross-team sync, run by Scott"])
+    LT --- SYNC
+    CT --- SYNC
+  end
+```
+
+| Tier | Who | Places |
+|---|---|---|
+| 1 | Scott | Scott's private repo |
+| 2 | Core team | luthien-org and luthien-brain (private repos), core@, #luthien-leads, Luthien group DM |
+| 3 | Contributors: partner orgs, open-source contributors, paid contractors, people on a work trial | contributors@, Google Docs shared with them |
+| 4 | Anyone | [luthien-proxy](https://github.com/LuthienResearch/luthien-proxy), this repo, [luthien.cc](https://luthien.cc), #luthien-contributors (public channel in the Seattle AI Safety Slack) |
+
+| | Team A: Luthien | Team B: Control Tower |
+|---|---|---|
+| Members | Core team and contributors | Redwood Research and EquiStamp engineers, Scott |
+| Private space | Tiers 1 to 3 above | Control Tower's own repo and Slack |
+| Standup | Async daily in Slack, Friday weekly | Control Tower Standup, weekdays |
+| Shared | Control Tooling Sync; public code in luthien-proxy and [control-tower](https://github.com/linuxarena/control-tower) | |
+
+Nothing moves between the two teams' private spaces, or outward to a less private tier, without Scott's approval.
+
 ## How it's built
 
 - **Agent loop:** [Claude Agent SDK](https://pypi.org/project/claude-agent-sdk/) (Python), on a normal Anthropic API key.
