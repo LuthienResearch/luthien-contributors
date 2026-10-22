@@ -6,7 +6,7 @@ Public tooling for people who contribute to [Luthien](https://luthien.cc): today
 
 Despite the name, this is not a private space for Luthien contributors: everything here is public. This repo is public on purpose: the bot's internals (code, prompt rules, approval gate, tests) are open so anyone can read, reuse and improve them.
 
-**All actual Luthien context lives in a private repo, never here.** That means people, projects, customers, meeting notes, decisions, partner material and anything shared with us in confidence. The agent's memory ("the brain") is the private repo [LuthienResearch/luthien-brain](https://github.com/LuthienResearch/luthien-brain); [`brain-template/`](brain-template/) holds only its empty scaffolding. Secrets live in Bitwarden and macOS Keychain, never in git. If you're unsure whether something is context or internals, put it in the private repo.
+**All actual Luthien context lives in a private repo, never here.** That means people, projects, customers, meeting notes, decisions, partner material and anything shared with us in confidence. The agent's memory ("the brain") is the `brain/` folder of the private repo [LuthienResearch/luthien-org](https://github.com/LuthienResearch/luthien-org/tree/main/brain); [`brain-template/`](brain-template/) holds only its empty scaffolding. Secrets live in Bitwarden and macOS Keychain, never in git. If you're unsure whether something is context or internals, put it in the private repo.
 
 ## Who can see what (access tiers)
 
@@ -34,7 +34,7 @@ flowchart TB
 | Tier | Who | Places |
 |---|---|---|
 | 1 | Scott | Scott's private repo |
-| 2 | Core team | luthien-org and luthien-brain (private repos), core@, #luthien-leads, Luthien group DM |
+| 2 | Core team | luthien-org (private repo, including the agent's brain), core@, #luthien-leads, Luthien group DM |
 | 3 | Contributors: partner orgs, open-source contributors, paid contractors, people on a work trial | contributors@, Google Docs shared with them |
 | 4 | Anyone | [luthien-proxy](https://github.com/LuthienResearch/luthien-proxy), this repo, [luthien.cc](https://luthien.cc), #luthien-contributors (public channel in the Seattle AI Safety Slack) |
 
@@ -51,7 +51,7 @@ Nothing moves between the two teams' private spaces, or outward to a less privat
 
 - **Agent loop:** [Claude Agent SDK](https://pypi.org/project/claude-agent-sdk/) (Python), on a normal Anthropic API key.
 - **Slack:** Bolt in Socket Mode. The bot connects out to Slack, so it needs no public URL.
-- **Memory ("the brain"):** the private brain repo is the agent's working directory. Every session's edits are committed.
+- **Memory ("the brain"):** the `brain/` folder of a private luthien-org clone is the agent's working directory. Every session's edits are committed, and git commands touch only that folder.
 - **Approval gate:** [`agent/approvals.py`](agent/approvals.py). Every tool call is checked in code, not in the prompt.
 - **Daily standup:** [`agent/standup.py`](agent/standup.py). See below.
 
@@ -96,7 +96,11 @@ Not built yet: Google Workspace, Linear and read-only GitHub tools; scheduled fo
    security add-generic-password -s luthien.slack-agent -a slack-app-token -w
    security add-generic-password -s luthien.slack-agent -a anthropic-api-key -w
    ```
-4. **Clone the brain** (private; ask a Luthien admin for access) next to this repo: `git clone git@github.com:LuthienResearch/luthien-brain.git ~/build/luthien-brain`
+4. **Clone the brain** (private; ask a Luthien admin for access). Use a dedicated sparse clone that checks out only `brain/`, so the rest of luthien-org never sits in the agent's clone:
+   ```sh
+   git clone --filter=blob:none --sparse https://github.com/LuthienResearch/luthien-org.git ~/build/luthien-org-agent-brain
+   git -C ~/build/luthien-org-agent-brain sparse-checkout set brain
+   ```
 5. **Run:** `scripts/run.sh`. Then invite the bot to a channel (`/invite @luthien-agent`) and mention it.
 
 Optional environment variables: `ALLOWED_USER_IDS` (comma-separated Slack user IDs; empty means any member of the workspace), `ADMIN_USER_IDS` (comma-separated Slack user IDs who can approve anyone's pending actions), `AGENT_MODEL` (default `claude-sonnet-5-5`), `MAX_BUDGET_USD` per session (default 3), `BRAIN_DIR`.
@@ -107,7 +111,7 @@ Each session pulls the latest brain first and commits its changes at the end. Th
 
 - Only members of the Seattle AI Safety workspace get answers. Slack Connect guests from other organizations (for example in the shared Redwood channels) are ignored.
 - The agent runs with an isolated Claude Code config folder (`.agent-claude-config/`), so the host user's settings, hooks and CLAUDE.md files never load.
-- Brain content is visible to everyone with access to the brain repo. The prompt forbids storing secrets, compensation, performance feedback and health data.
+- Brain content is visible to everyone with access to luthien-org, and anyone in the Slack workspace can ask the agent about it. The prompt forbids storing secrets, compensation, performance feedback and health data.
 - **Known gap:** WebFetch is auto-allowed, so a prompt injection in Slack or on a web page could try to leak brain contents through a URL. Before widening access, consider moving WebFetch behind approval.
 - **Known gap:** running on a laptop means the agent shares that machine. The path checks block file access outside the brain, but a container on a dedicated machine is the stronger boundary.
 
