@@ -8,20 +8,30 @@ Despite the name, this is not a private space for Luthien contributors: everythi
 
 **All actual Luthien context lives in a private repo, never here.** That means people, projects, customers, meeting notes, decisions, partner material and anything shared with us in confidence. The agent's memory ("the brain") is the `brain/` folder of the private repo [LuthienResearch/luthien-org](https://github.com/LuthienResearch/luthien-org/tree/main/brain); [`brain-template/`](brain-template/) holds only its empty scaffolding. Secrets live in Bitwarden and macOS Keychain, never in git. If you're unsure whether something is context or internals, put it in the private repo.
 
-## Who can see what (access tiers)
+## Who can see what (access levels)
 
-Each tier is defined by who can actually read it. Tiers nest: everyone in an inner tier can read everything in the outer ones. Before you file something, check that everyone in the tier may read it; if not, file it one tier further in.
+Luthien has three access levels. Each one has a Slack channel, and GitHub and Google Drive access follow the same levels. Levels nest: leads see everything core sees, and core sees everything contributors see. Before you post or file something, check that everyone at that level may read it; if not, move it one level in.
+
+| Level | What it's for | Slack | GitHub | Google Drive |
+|---|---|---|---|---|
+| **Leads** | Day-to-day coordination for the people actively driving Luthien strategy, funding applications, client engagements (e.g., Faculty, Redwood) and core processes (hiring, project brief mechanisms). | #luthien-leads (private) | luthien-org (private) | Not set up yet |
+| **Core** | Close collaborators and trusted voices. Deeper discussion on direction and decisions; join in as much or as little as your time allows. | #luthien-core (private) | luthien-org (private) | core@ |
+| **Contributors** | Open to anyone working on Luthien or interested in getting involved. Updates, questions, and ways to help. | [#luthien-contributors](https://seattleaisafety.slack.com/archives/C0APTJLNWN6) (public channel in the Seattle AI Safety Slack) | [luthien-proxy](https://github.com/LuthienResearch/luthien-proxy), this repo (both public; write access on invite) | Docs shared as "anyone with the link can view"; contributors@ is being set up |
+
+Contributors-level material is effectively public: anyone with the link can read it, and invited people can write. [luthien.cc](https://luthien.cc) is public too.
+
+Leads and core currently share luthien-org on GitHub; it will be split so that each level gets only its own repo access.
+
+### Two teams
 
 We run something like a two-team [Scaled Agile Framework](https://en.wikipedia.org/wiki/Scaled_agile_framework) setup: two teams with their own access, standups and repos, synced through one cross-team meeting that Scott runs.
 
 ```mermaid
 flowchart TB
-  subgraph PUB["4. Public: anyone"]
+  subgraph PUB["Contributors and public"]
     subgraph LT["Team A: Luthien"]
-      subgraph T3["3. Contributors: anyone working with Luthien who isn't core team"]
-        subgraph T2["2. Core team"]
-          T1["1. Scott only"]
-        end
+      subgraph CORE["Core"]
+        LEADS["Leads"]
       end
     end
     CT["Team B: Control Tower (Redwood Research and EquiStamp)"]
@@ -31,21 +41,14 @@ flowchart TB
   end
 ```
 
-| Tier | Who | Places |
-|---|---|---|
-| 1 | Scott | Scott's private repo |
-| 2 | Core team | luthien-org (private repo, including the agent's brain), core@, #luthien-leads, Luthien group DM |
-| 3 | Contributors: partner orgs, open-source contributors, paid contractors, people on a work trial | contributors@, Google Docs shared with them |
-| 4 | Anyone | [luthien-proxy](https://github.com/LuthienResearch/luthien-proxy), this repo, [luthien.cc](https://luthien.cc), #luthien-contributors (public channel in the Seattle AI Safety Slack) |
-
 | | Team A: Luthien | Team B: Control Tower |
 |---|---|---|
-| Members | Core team and contributors | Redwood Research and EquiStamp engineers, Scott |
-| Private space | Tiers 1 to 3 above | Control Tower's own repo and Slack |
+| Members | Leads, core and contributors | Redwood Research and EquiStamp engineers, Scott |
+| Private space | Leads and core levels above | Control Tower's own repo and Slack |
 | Standup | Async daily in Slack, Friday weekly | Control Tower Standup, weekdays |
 | Shared | Control Tooling Sync; public code in luthien-proxy and [control-tower](https://github.com/linuxarena/control-tower) | |
 
-Nothing moves between the two teams' private spaces, or outward to a less private tier, without Scott's approval.
+Nothing moves between the two teams' private spaces, or outward to a less private level, without Scott's approval.
 
 ## How it's built
 
