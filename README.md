@@ -111,7 +111,7 @@ Not built yet: Google Workspace, Linear and read-only GitHub tools; scheduled fo
    git clone --filter=blob:none --sparse https://github.com/LuthienResearch/luthien-org.git ~/build/luthien-org-agent-brain
    git -C ~/build/luthien-org-agent-brain sparse-checkout set brain
    ```
-5. **Run:** `scripts/run.sh`. Then invite the bot to a channel (`/invite @luthien-agent`) and mention it.
+5. **Run:** `scripts/run.sh` from a separate clone used only for running the bot (see Security notes). Then invite the bot to a channel (`/invite @luthien-agent`) and mention it.
 
 Optional environment variables: `ALLOWED_USER_IDS` (comma-separated Slack user IDs; empty means any member of the workspace), `ADMIN_USER_IDS` (comma-separated Slack user IDs who can approve anyone's pending actions), `AGENT_MODEL` (default `claude-sonnet-5-5`), `MAX_BUDGET_USD` per session (default 3), `BRAIN_DIR`.
 
@@ -123,6 +123,7 @@ Each session pulls the latest brain first and commits its changes at the end. Th
 - The agent runs with an isolated Claude Code config folder (`.agent-claude-config/`), so the host user's settings, hooks and CLAUDE.md files never load.
 - Brain content is visible to everyone with access to luthien-org, and anyone in the Slack workspace can ask the agent about it. The prompt forbids storing secrets, compensation, performance feedback and health data.
 - **Known gap:** WebFetch is auto-allowed, so a prompt injection in Slack or on a web page could try to leak brain contents through a URL. Before widening access, consider moving WebFetch behind approval.
+- **Contributors can push to main**, so main is not reviewed. The machine that runs the bot holds its Slack and Anthropic keys and the brain clone, so run it from a separate clone and update that clone only after reading the diff (`git fetch && git diff HEAD origin/main`, then `git merge origin/main`). Never `git pull` blind in the run clone.
 - **Known gap:** running on a laptop means the agent shares that machine. The path checks block file access outside the brain, but a container on a dedicated machine is the stronger boundary.
 
 ## Development
