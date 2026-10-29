@@ -22,6 +22,13 @@ Contributors-level material is effectively public: anyone with the link can read
 
 Leads and core currently share luthien-org on GitHub; it will be split so that each level gets only its own repo access.
 
+### Getting involved
+
+1. Join [#luthien-contributors](https://seattleaisafety.slack.com/archives/C0APTJLNWN6) in the Seattle AI Safety Slack.
+2. Read the [Luthien Project Briefs](https://docs.google.com/document/d/1RYgVMUhNh_3Wpkapg-8WHlj1hJdbxa1aGzlCpRHyWoc/edit) and pick one that fits your skills and time.
+3. Post in #luthien-contributors which brief you picked, your top uncertainty, and anything blocking you.
+4. For code, start with [luthien-proxy](https://github.com/LuthienResearch/luthien-proxy). Ask in the channel for write access.
+
 ### Two teams
 
 We run something like a two-team [Scaled Agile Framework](https://en.wikipedia.org/wiki/Scaled_agile_framework) setup: two teams with their own access, standups and repos, synced through one cross-team meeting that Scott runs.
