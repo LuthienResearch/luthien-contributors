@@ -16,8 +16,8 @@ export ANTHROPIC_API_KEY="$(read_secret anthropic-api-key)"
 [[ "$SLACK_BOT_TOKEN" == xoxb-* ]] || { print -u2 'slack-bot-token must start with xoxb-'; exit 1; }
 [[ "$SLACK_APP_TOKEN" == xapp-* ]] || { print -u2 'slack-app-token must start with xapp-'; exit 1; }
 
-# The brain is the brain/ folder of a sparse luthien-org clone (see README).
-export BRAIN_DIR="${BRAIN_DIR:-$HOME/build/luthien-org-agent-brain/brain}"
-# Daily async standup in #luthien (set STANDUP_CHANNEL_ID= to turn off).
-export STANDUP_CHANNEL_ID="${STANDUP_CHANNEL_ID-C0C47248JF7}"
+# The brain is a contributors-level repo, separate from luthien-org (see README).
+export BRAIN_DIR="${BRAIN_DIR:-$HOME/build/luthien-contributors-brain}"
+# Daily async standup in #luthien-contributors (set STANDUP_CHANNEL_ID= to turn off).
+export STANDUP_CHANNEL_ID="${STANDUP_CHANNEL_ID-C0APTJLNWN6}"
 exec uv run python -m agent.app

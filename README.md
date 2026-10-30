@@ -6,7 +6,7 @@ Public tooling for people who contribute to [Luthien](https://luthien.cc): today
 
 Despite the name, this is not a private space for Luthien contributors: everything here is public. This repo is public on purpose: the bot's internals (code, prompt rules, approval gate, tests) are open so anyone can read, reuse and improve them.
 
-**All actual Luthien context lives in a private repo, never here.** That means people, projects, customers, meeting notes, decisions, partner material and anything shared with us in confidence. The agent's memory ("the brain") is the `brain/` folder of the private repo [LuthienResearch/luthien-org](https://github.com/LuthienResearch/luthien-org/tree/main/brain); [`brain-template/`](brain-template/) holds only its empty scaffolding. Secrets live in Bitwarden and macOS Keychain, never in git. If you're unsure whether something is context or internals, put it in the private repo.
+**All actual Luthien context lives in a private repo, never here.** That means people, projects, customers, meeting notes, decisions, partner material and anything shared with us in confidence. The agent is contributors-level only: its memory ("the brain") is the private repo [LuthienResearch/luthien-contributors-brain](https://github.com/LuthienResearch/luthien-contributors-brain), which holds only what everyone in #luthien-contributors may read and nothing from luthien-org; [`brain-template/`](brain-template/) holds only its empty scaffolding. Secrets live in Bitwarden and macOS Keychain, never in git. If you're unsure whether something is context or internals, put it in the private repo.
 
 ## Who can see what (access levels)
 
@@ -61,7 +61,7 @@ Nothing moves between the two teams' private spaces, or outward to a less privat
 
 - **Agent loop:** [Claude Agent SDK](https://pypi.org/project/claude-agent-sdk/) (Python), on a normal Anthropic API key.
 - **Slack:** Bolt in Socket Mode. The bot connects out to Slack, so it needs no public URL.
-- **Memory ("the brain"):** the `brain/` folder of a private luthien-org clone is the agent's working directory. Every session's edits are committed, and git commands touch only that folder.
+- **Memory ("the brain"):** a clone of the private luthien-contributors-brain repo is the agent's working directory. Every session's edits are committed.
 - **Approval gate:** [`agent/approvals.py`](agent/approvals.py). Every tool call is checked in code, not in the prompt.
 - **Daily standup:** [`agent/standup.py`](agent/standup.py). See below.
 
@@ -77,7 +77,7 @@ Each weekday at 8am Pacific, the bot posts in the standup channel:
 
 Reply in the thread on days you worked on Luthien. There's no standup meeting; blockers get picked up in the thread. The one live meeting is the Friday weekly.
 
-Settings: `STANDUP_CHANNEL_ID` (channel to post in; empty turns it off; `scripts/run.sh` defaults to #luthien), `STANDUP_TIME` (default `08:00`), `STANDUP_TZ` (default `America/Los_Angeles`). Invite the bot to the channel first (`/invite @luthien-agent`).
+Settings: `STANDUP_CHANNEL_ID` (channel to post in; empty turns it off; `scripts/run.sh` defaults to #luthien-contributors), `STANDUP_TIME` (default `08:00`), `STANDUP_TZ` (default `America/Los_Angeles`). Invite the bot to the channel first (`/invite @luthien-agent`).
 
 ## What it can do (version 0.1)
 
@@ -106,10 +106,9 @@ Not built yet: Google Workspace, Linear and read-only GitHub tools; scheduled fo
    security add-generic-password -s luthien.slack-agent -a slack-app-token -w
    security add-generic-password -s luthien.slack-agent -a anthropic-api-key -w
    ```
-4. **Clone the brain** (private; ask a Luthien admin for access). Use a dedicated sparse clone that checks out only `brain/`, so the rest of luthien-org never sits in the agent's clone:
+4. **Clone the brain** (private; ask a Luthien admin for access):
    ```sh
-   git clone --filter=blob:none --sparse https://github.com/LuthienResearch/luthien-org.git ~/build/luthien-org-agent-brain
-   git -C ~/build/luthien-org-agent-brain sparse-checkout set brain
+   git clone https://github.com/LuthienResearch/luthien-contributors-brain.git ~/build/luthien-contributors-brain
    ```
 5. **Run:** `scripts/run.sh` from a separate clone used only for running the bot (see Security notes). Then invite the bot to a channel (`/invite @luthien-agent`) and mention it.
 
@@ -121,8 +120,8 @@ Each session pulls the latest brain first and commits its changes at the end. Th
 
 - Only members of the Seattle AI Safety workspace get answers. Slack Connect guests from other organizations (for example in the shared Redwood channels) are ignored.
 - The agent runs with an isolated Claude Code config folder (`.agent-claude-config/`), so the host user's settings, hooks and CLAUDE.md files never load.
-- Brain content is visible to everyone with access to luthien-org, and anyone in the Slack workspace can ask the agent about it. The prompt forbids storing secrets, compensation, performance feedback and health data.
-- **Known gap:** WebFetch is auto-allowed, so a prompt injection in Slack or on a web page could try to leak brain contents through a URL. Before widening access, consider moving WebFetch behind approval.
+- Anyone in the Slack workspace can ask the agent about brain content, so the brain holds contributors-level material only. Keep the bot out of private channels, because it can read every channel it's in. The prompt forbids storing secrets, compensation, performance feedback and health data.
+- **Known gap:** WebFetch is auto-allowed, so a prompt injection in Slack or on a web page could try to leak brain contents through a URL. That's low risk while the brain is contributors-level; move WebFetch behind approval before giving the bot anything more private.
 - **Contributors can push to main**, so main is not reviewed. The machine that runs the bot holds its Slack and Anthropic keys and the brain clone, so run it from a separate clone and update that clone only after reading the diff (`git fetch && git diff HEAD origin/main`, then `git merge origin/main`). Never `git pull` blind in the run clone.
 - **Known gap:** running on a laptop means the agent shares that machine. The path checks block file access outside the brain, but a container on a dedicated machine is the stronger boundary.
 
