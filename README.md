@@ -1,6 +1,6 @@
 # Luthien contributors
 
-Public tooling for people who contribute to [Luthien](https://luthien.cc): today, a Slack agent for the Seattle AI Safety workspace that answers questions, takes actions, and runs the team's async daily standup.
+Public tooling for people who contribute to [Luthien](https://luthien.cc): today, a Slack agent for the Seattle AI Safety workspace that answers questions, and takes actions.
 
 ## Public code, private context
 
@@ -31,7 +31,7 @@ Leads and core currently share luthien-org on GitHub; it will be split so that e
 
 ### Two teams
 
-We run something like a two-team [Scaled Agile Framework](https://en.wikipedia.org/wiki/Scaled_agile_framework) setup: two teams with their own access, standups and repos, synced through one cross-team meeting that Scott runs.
+We run something like a two-team [Scaled Agile Framework](https://en.wikipedia.org/wiki/Scaled_agile_framework) setup: two teams with their own access and repos, synced through one cross-team meeting that Scott runs.
 
 ```mermaid
 flowchart TB
@@ -52,7 +52,6 @@ flowchart TB
 |---|---|---|
 | Members | Leads, core and contributors | Redwood Research and EquiStamp engineers, Scott |
 | Private space | Leads and core levels above | Control Tower's own repo and Slack |
-| Standup | Async daily in Slack, Friday weekly | Control Tower Standup, weekdays |
 | Shared | Control Tooling Sync; public code in luthien-proxy and [control-tower](https://github.com/linuxarena/control-tower) | |
 
 Nothing moves between the two teams' private spaces, or outward to a less private level, without Scott's approval.
@@ -63,21 +62,8 @@ Nothing moves between the two teams' private spaces, or outward to a less privat
 - **Slack:** Bolt in Socket Mode. The bot connects out to Slack, so it needs no public URL.
 - **Memory ("the brain"):** a clone of the private luthien-contributors-brain repo is the agent's working directory. Every session's edits are committed.
 - **Approval gate:** [`agent/approvals.py`](agent/approvals.py). Every tool call is checked in code, not in the prompt.
-- **Daily standup:** [`agent/standup.py`](agent/standup.py). See below.
 
 The design follows publicly documented Agent SDK patterns and was inspired by Hal, Neolithic's Slack agent; no Neolithic code is in this repo.
-
-## Daily standup
-
-Each weekday at 8am Pacific, the bot posts in the standup channel:
-
-1. What did you do?
-2. What's next, and for which weekly goal?
-3. What are you blocked on?
-
-Reply in the thread on days you worked on Luthien. There's no standup meeting; blockers get picked up in the thread. The one live meeting is the Friday weekly.
-
-Settings: `STANDUP_CHANNEL_ID` (channel to post in; empty turns it off; `scripts/run.sh` defaults to #luthien-contributors), `STANDUP_TIME` (default `08:00`), `STANDUP_TZ` (default `America/Los_Angeles`). Invite the bot to the channel first (`/invite @luthien-agent`).
 
 ## What it can do (version 0.1)
 
