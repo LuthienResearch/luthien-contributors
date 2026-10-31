@@ -1,5 +1,5 @@
 #!/bin/zsh
-# Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy.
+# Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy. Source of truth: https://github.com/scottwofford/sw-prv/blob/main/scripts/local-whisper/clip_retranscribe.sh (private). This copy is a redacted mirror and may lag behind it.
 # Re-transcribe a short stretch of a recording with local Whisper, to settle a garbled passage.
 # Usage: clip_retranscribe.sh <audio-file-or-URL> <start HH:MM:SS> <end HH:MM:SS> [model]
 #   audio: for Plaud, the presigned URL from the Plaud MCP get_file call (valid 24h).

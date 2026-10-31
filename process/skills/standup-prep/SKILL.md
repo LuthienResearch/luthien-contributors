@@ -3,7 +3,7 @@ name: standup-prep
 description: Prep Scott's standup updates for either or both of his standups, each written for its own audience - the Control Tower Standup (Henri's 9:30am PT meeting with the EquiStamp and Redwood team, prepped in his "standup Scott's raw notes" Google Doc) and the Luthien async standup (daily thread in the Luthien Slack channel, plus the Friday weekly). Use when Scott says "prep for standup", "ct standup", "luthien standup", "standup raw", "help me fill out standup", "what should I ask in standup", "summarize what I worked on since last standup", "standup update", or asks to open today's standup template.
 ---
 
-> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy.
+> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy. Source of truth: https://github.com/scottwofford/sw-prv/blob/main/skills/standup-prep/SKILL.md (private). This copy is a redacted mirror and may lag behind it.
 
 # Standup prep
 

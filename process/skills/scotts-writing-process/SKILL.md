@@ -3,7 +3,7 @@ name: scotts-writing-process
 description: Scott's writing process. Use whenever drafting text Scott will paste or send under his name (email, Slack DM, LinkedIn message, doc body, deck content, agenda item, investor memo, pitch text, anything spoken for him). Five-step process: Big Picture First → Pyramid Principle → Outline → Sentence by Sentence → Voice Check. Default behavior is options-not-drafts; never write full drafts unprompted, and even when Scott explicitly asks for a draft, run Steps 1-3 explicitly first before producing one. Triggers on keywords: draft, draft an email, write an email, draft a message, write a memo, help me write, sentence by sentence, big picture first, reaction draft, voice check.
 ---
 
-> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy.
+> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy. Source of truth: ~/.claude/skills/scotts-writing-process/SKILL.md (private). This copy is a redacted mirror and may lag behind it.
 
 # Scott's Writing Process
 

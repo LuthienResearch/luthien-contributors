@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy.
+# Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy. Source of truth: https://github.com/scottwofford/sw-prv/blob/main/scripts/local-whisper/transcribe_whisper.py (private). This copy is a redacted mirror and may lag behind it.
 # /// script
 # requires-python = ">=3.10"
 # dependencies = [

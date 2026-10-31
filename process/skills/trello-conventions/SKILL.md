@@ -3,7 +3,7 @@ name: trello-conventions
 description: Scott's Trello board conventions — list naming, ownership defaults, ETA discipline, action-item scope, search-before-creating. Use when working with Scott's Luthien Trello board, creating cards, assigning owners, or referencing action items in any markdown doc. Required reading before adding/editing Trello cards or writing debriefs / agendas / meeting notes that reference team work.
 ---
 
-> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy.
+> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy. Source of truth: https://github.com/scottwofford/sw-prv/blob/main/skills/trello-conventions/SKILL.md (private). This copy is a redacted mirror and may lag behind it.
 
 # Trello Conventions
 

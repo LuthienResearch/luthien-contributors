@@ -1,4 +1,4 @@
-> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy.
+> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy. Source of truth: https://github.com/scottwofford/sw-prv/blob/main/requirements/personal/scott-response-req.md (private). This copy is a redacted mirror and may lag behind it.
 
 # Scott Wofford — requirements
 

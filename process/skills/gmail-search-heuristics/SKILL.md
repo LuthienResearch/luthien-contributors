@@ -3,7 +3,7 @@ name: gmail-search-heuristics
 description: Search past Gmail correspondence efficiently. Default search order for finding past messages with a specific person — domain over name, subject keywords, company name fallback. Use when searching Gmail for emails with investors, partners, prospects, or any external counterparty. Avoids the personal-name false-positive trap and the from:scott@luthienresearch.org sent-thread blind spot.
 ---
 
-> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy.
+> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy. Source of truth: https://github.com/scottwofford/sw-prv/blob/main/skills/gmail-search-heuristics/SKILL.md (private). This copy is a redacted mirror and may lag behind it.
 
 # Gmail Search Heuristics
 

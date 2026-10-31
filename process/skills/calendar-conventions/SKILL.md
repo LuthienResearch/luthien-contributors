@@ -3,7 +3,7 @@ name: calendar-conventions
 description: Scott's Google Calendar conventions: query both calendars, free/busy flags, self-only events need no approval (and the hook that enforces it), Calendly bookings don't signal intent. Use for any availability check, "is it booked?", calendar event create/update, or finding a meeting's recording or Notes by Gemini.
 ---
 
-> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy.
+> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy. Source of truth: https://github.com/scottwofford/sw-prv/blob/main/skills/calendar-conventions/SKILL.md (private). This copy is a redacted mirror and may lag behind it.
 
 # Calendar conventions
 

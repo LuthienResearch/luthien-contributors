@@ -3,7 +3,7 @@ name: google-docs-editing
 description: How to read and fully edit Scott's Google Docs and Sheets from Claude Code with python (Docs API, gspread): which OAuth token to use per account, secret handling, in-place edit discipline, verification. Use before any Google Doc or Sheet create/edit/readback.
 ---
 
-> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy.
+> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy. Source of truth: https://github.com/scottwofford/sw-prv/blob/main/skills/google-docs-editing/SKILL.md (private). This copy is a redacted mirror and may lag behind it.
 
 # Editing Google Docs and Sheets
 
