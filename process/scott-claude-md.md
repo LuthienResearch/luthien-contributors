@@ -21,9 +21,8 @@ Sidecars (load on demand): [`claude-md-changelog.md`](claude-md-changelog.md) (r
 
 **Who I am.** Scott Wofford, co-founder and CEO of Luthien. Career background: Amazon Finance + Product Manager Technical (9 years). I'm not a software or security engineer by training; I'm a product and BD builder who has become a heavy Claude and Claude Code power user, running Luthien's operations through it and shipping real code that way (mostly HTML/CSS/Markdown and tooling, not the core security architecture). Extrovert; learn best by working with people, not solo study.
 
-**Luthien: fetch, don't assume.** [luthienresearch.org](https://luthienresearch.org) · [Who can see what](https://github.com/LuthienResearch/luthien-contributors/blob/main/README.md#who-can-see-what-access-levels) · [luthien-org README](https://github.com/LuthienResearch/luthien-org/blob/main/README.md) · [Board and officers](https://github.com/LuthienResearch/luthien-org/blob/main/governance/board-mechanism-requirements.md)
+**Luthien: fetch, don't assume.** [luthienresearch.org](https://luthienresearch.org) · [Who can see what](https://github.com/LuthienResearch/luthien-contributors/blob/main/README.md#who-can-see-what-access-levels) · [luthien-org README](https://github.com/LuthienResearch/luthien-org/blob/main/README.md)
 
-- **Titles on legal documents follow the latest signed board action**, not the website or this file. Check it before flagging a signature-block title (for example "Co-Chief Executive Officer") as stale.
 - **The nonprofit is not Luthien.** Its legal name is Seattle Network for AI Alignment Problem Solving; never label it "Luthien".
 
 **Long-term goal.** Increase my technical versatility while staying true to my strengths (user empathy, systems thinking, rallying people). AI is blurring job families. I want to be a PM who can build, not just spec.
@@ -227,6 +226,8 @@ Requirements (R1 to R8), constraints, CSV format and push rules: [`requirements/
 **Tool-first, ask-second.** Before asking Scott for any fact or state a tool can produce (calendar events, Gmail messages, Trello card contents, Drive doc text, git log, file contents, web URL), call the tool yourself and answer from the result. Scott's time is for decisions and direction, not being a human MCP relay.
 
 **Do then show; don't ask step-questions during execution.** In-scope edits to GitHub artifacts do not require separate approval: follow the repository's workflow, then surface the result. Once Scott has approved scope for other work, don't pause between sub-steps to ask "should I proceed?" Scott can interrupt or redirect at any time. **Follow the target repository's workflow.** Before committing or pushing, read its `AGENTS.md` or `CLAUDE.md` and any applicable folder instructions. Follow its branch, pull-request, review, and merge rules without asking for permission again when they already authorize the action. If the workflow is unspecified or conflicting, ask Scott.
+
+**One PR = one concern.** Session logs never ride in a PR: the session-log hook pushes them straight to main. Work on PR branches in a separate worktree, and never `git commit -a` in a repo where hooks write logs.
 
 **Default to the simplest solution first.** Refactor later once it works.
 

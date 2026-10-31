@@ -6,50 +6,24 @@ Skill: [SKILL.md](https://github.com/scottwofford/sw-prv/blob/main/skills/standu
 
 ## Requirements
 
-1. **Audience first (Scott's writing process).** The reader is the Control Tower Standup, not Scott. Scott, 2026-10-21: "skill should be inspired by writing proces to keep in mind that audience is ct standup, so they don't know what is cg application so gimme bullets tailored to my audience."
-2. **Past entries define good.** Scott, 2026-10-21: "use past standup raw dates as the source of truth and examples of what good looks like."
-3. **Concise.** Scott: "too verbose" (Aug 28); "number them and be way more concise, and make liberal use of links" (Oct 12, Control Tooling Sync update); "it should be just the 3 bullets with concise descriptions of each PR" (Oct 13).
-4. **Facts verified live.** PR status was wrong twice: "2257 is in draft, not open for review" (Oct 5); "114 is draft... idk how u missed that?" (Oct 8). PRs opened by the Claude app were missed (Oct 12).
-5. **Scott's plan is ground truth.** Read his latest planning transcript before suggesting priorities; don't challenge the premise. Scott, 2026-10-21: "dude, I'm in charge, don't challenge my premise... treat that as the plan and ground truth."
-6. **Pre-answer what tools can answer.** Scott, Oct 13: "also read past standup transcripts to see if you can figure out the answer to these questions yourself."
-7. **Doc writes only on request**, never into a section Scott is typing in (Oct 2 and Oct 12 stops; [COE-2026-09-21](https://github.com/scottwofford/sw-prv/blob/main/coes/COE-2026-09-21-active-google-doc-drafting.md)).
-8. **Fast.** Requests arrive 8:43 to 9:35am PT, mostly after 9:10 for a 9:30 meeting. No padding in the reply.
-9. **Nothing private in team surfaces.** Scott, Oct 8: "don't propose to send nda stuff in dev channel!"
-10. **One skill, both standups, separate updates per audience.** Scott, 2026-10-21: "make standup prep skill generic so it can be used in either standup and prepare for both seperately to consider the audience of my standup updates." Scott already shares his Control Tower updates with the Luthien team in Slack (Oct 20 thread "Scott's Standup Updates to ControlTower team"); the Luthien version should be rewritten for that team, not pasted, and must respect the cross-team rule in the [access tiers](https://github.com/LuthienResearch/luthien-contributors/blob/main/README.md#who-can-see-what-access-tiers).
+Format: the [luthien-org requirements standard](https://github.com/LuthienResearch/luthien-org/blob/main/ui-fb-dev/2-versions-requirements/README.md).
 
-## Examples of good (verbatim from the doc)
+| # | Requirement (problem only) | Current state as of 2026-10-31 | Key evidence |
+|---|---|---|---|
+| R1 | <u>Written for the room.</u> When I give an update, the people in that meeting understand it without knowing my other team's context. | Step 1 names the audience; the table lists what each audience doesn't know; step 5 translates. | Scott, 2026-10-21: "audience is ct standup, so they don't know what is cg application so gimme bullets tailored to my audience." |
+| R2 | <u>Looks like mine.</u> My update matches the style of my past entries for that meeting. | SKILL.md links each meeting's doc and example tabs as the format source. | Scott, 2026-10-21: "use past standup raw dates as the source of truth and examples of what good looks like." |
+| R3 | <u>Concise and linked.</u> I can read my update in seconds and click through to anything in it. | Step 4: 1 to 3 linked fragments; the sync is numbered with links throughout. | Scott: "too verbose" (Aug 28); "number them and be way more concise, and make liberal use of links" (Oct 12); "just the 3 bullets with concise descriptions of each PR" (Oct 13); "w/ links (high info density)" (Oct 20). |
+| R4 | <u>Correct status.</u> Every status I report (PR draft or ready, merged, done) is true at the time I report it. | Step 2 reads status from `gh` and Linear, including PRs opened by the Claude app. | "2257 is in draft, not open for review" (Oct 5); "114 is draft... idk how u missed that?" (Oct 8); Claude-app PRs missed (Oct 12). |
+| R5 | <u>My plan, not a new one.</u> My Next items reflect the priorities I already set, without my premise being challenged. | Step 2 treats the latest planning transcript as ground truth; step 4 takes Next from it, not from Gemini action items. | Scott, 2026-10-21: "dude, I'm in charge, don't challenge my premise... treat that as the plan and ground truth." |
+| R6 | <u>Only real asks.</u> The questions I raise are ones nobody has already answered and that I would raise myself. | Step 2 reads the last meeting's transcript to pre-answer; step 4 limits asks to attendees and never routes them through Tyler. | Scott, Oct 13: "read past standup transcripts to see if you can figure out the answer to these questions yourself"; Oct 5: "shop asking tyler shit!!" |
+| R7 | <u>My doc stays mine.</u> Nothing gets written into my doc unless I ask, and never into a section I'm typing in. | Step 7: writes only on request, re-reads first, stops if Scott is drafting. | Oct 2 and Oct 12 stops; [COE-2026-09-21](https://github.com/scottwofford/sw-prv/blob/main/coes/COE-2026-09-21-active-google-doc-drafting.md). |
+| R8 | <u>Nothing private leaks.</u> Nothing from one team's private spaces, and nothing under NDA or personal, appears in another team's update. | Step 5 cross-team rule; borderline items go to the gap check. | Scott, Oct 8: "don't propose to send nda stuff in dev channel!"; [access tiers](https://github.com/LuthienResearch/luthien-contributors/blob/main/README.md#who-can-see-what-access-levels). |
+| R9 | <u>One ask, any meeting.</u> I can prep any of my recurring team meetings the same way, each update separate and written for its own team. | One meeting-agnostic skill; "prep for standup" is read from the current day, time and upcoming or ongoing meetings. | Scott, 2026-10-21: "make standup prep skill generic so it can be used in either standup and prepare for both seperately"; 2026-10-31: "make the skill agnostic." |
+| R10 | <u>Recent, real attendees.</u> My sync update covers only the recent past and the people who actually came, with no assumptions about when a meeting happens. | Sync: last 7 days only; attendees checked against transcripts; schedule from the calendar event. | Scott, Oct 26: "only include stuff in the past 7 days"; "look at red-team transcript to see who actually attended"; 2026-10-31: meeting cadence is ad hoc, so the skill assumes none. |
 
-**Oct 13** (blockers style)
-- Last 24 hours/since last standup
-  - Meetings
-  - Meridian email
-- Next 24 hours/until next standup
-  - Docs overhaul + Redwood website improvements
-  - EAG NYC prep
-- Blockers and/or discussion topics
-  - Henri: docs can't deploy from main until the public settings are ported to the env API (LIN-1875); same failure turns the docs check red on #2407. ETA? Can the docs build skip unported settings?
-  - Henri: leaderboard prod deploys off since #353, deliberate? Merge order #376 vs #383?
-  - Marshall: control-tower-docs.redwoodresearch.org still doesn't resolve; #2293 is approved and only waiting on that DNS record
-  - Blog post: who owns it, and does it wait until leaderboard prod deploys are back on?
+## Examples of good
 
-**Oct 1** (outsider role spelled out)
-- Blockers and/or discussion topics
-  - GPU sandbox for ResearchArena: can our EC2 fleet run GPU instances, or another runner? Who owns?
-  - Test-set flaw: fix the environment or leave it? Defer until the port lands?
-
-**Oct 21** (Luthien-internal work in team terms)
-- Last 24 hours/since last standup
-  - Started a bunch of slack
-  - Met open-source security eng → read report → forwarded to Miguel + posted in slack
-
-**Oct 20, Luthien Slack** (Control Tower update shared with the Luthien team; verbatim excerpt)
-- Next 24 hours/until next standup
-  - Redwood Security Bot
-  - EAG follow-ups. Build the cyber-eval collaborator list (Tom Clarke from Faculty action item 1).
-
-**Oct 20** (follow-ups filled live)
-- Follow-ups / reactions to what people said live during standup
-  - 30 papers left? so 30 papers * 5 hrs each = 150 hrs ish?
+In the [raw notes doc](https://docs.google.com/document/d/1uxHTW1vRd8bWG806BKt9Laoz3wroC89BEdgwEzxg-eo/edit): [Oct 13: blockers](https://docs.google.com/document/d/1uxHTW1vRd8bWG806BKt9Laoz3wroC89BEdgwEzxg-eo/edit?tab=t.0#heading=h.z6ksad4826cq) · [Oct 1: outsider role spelled out](https://docs.google.com/document/d/1uxHTW1vRd8bWG806BKt9Laoz3wroC89BEdgwEzxg-eo/edit?tab=t.0#heading=h.ululegpwlqqh) · [Oct 20: follow-ups filled live](https://docs.google.com/document/d/1uxHTW1vRd8bWG806BKt9Laoz3wroC89BEdgwEzxg-eo/edit?tab=t.0#heading=h.kbtrq8ma8jjp) · [Oct 21: other team's work in this team's terms](https://docs.google.com/document/d/1uxHTW1vRd8bWG806BKt9Laoz3wroC89BEdgwEzxg-eo/edit?tab=t.0#heading=h.fq9x101lg1vz)
 
 ## Retro findings
 
@@ -63,4 +37,5 @@ Skill: [SKILL.md](https://github.com/scottwofford/sw-prv/blob/main/skills/standu
 | Date | Change |
 |---|---|
 | 2026-10-21 | Created from retro |
-| 2026-10-21 | Renamed from ct-standup-prep; covers the Luthien async standup too, one update per audience |
+| 2026-10-21 | Renamed from ct-standup-prep; covers the Luthien standup too, one update per audience |
+| 2026-10-31 | Requirements recast in the luthien-org requirements table format; the speed requirement dropped; examples are links to the doc's headings, not copies. Meeting-agnostic: no Luthien standup specifics (it is ad hoc); "prep for standup" read from context. Covers the Control Tooling Sync; no assumed cadence; team names and schedule come from the calendar event; the prep docs are linked instead of described |

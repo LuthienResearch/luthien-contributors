@@ -133,7 +133,7 @@ Types and where they live:
 
 - Customer / user / investor / partner debriefs → `call-agendas-and-notes/call-prep-agendas-debriefs/` (this repo); filename per that folder's README.
 - Internal strategy / co-founder debriefs → this repo.
-- Personal coaching debriefs (Adam Tury, etc.) → `private-claude-code-docs/personal/` (personal development, not team-shared). Coaching-specific deltas + how a debrief flows into Scott's systems: `private-claude-code-docs/personal/objective.md`.
+- Coaching sessions and everything else: follow [Meeting home](https://github.com/LuthienResearch/luthien-org/blob/main/call-agendas-and-notes/CLAUDE.md#meeting-home), the one routing rule.
 
 ## Transcript Sources (in priority order)
 
