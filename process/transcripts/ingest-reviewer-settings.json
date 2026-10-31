@@ -1,0 +1,30 @@
+{
+  "_comment": "Settings for the CAGED reviewer pass (transcripts/ingest_cron.hardened.sh). A second, low-privilege claude -p that reads the staged diff + manifest and emits APPROVE / ESCALATE. It has NO tools that can act: no Bash, no Write/Edit, no web, no MCP, no secrets. It can only Read/Grep the review inputs. Being read-only, it cannot be steered into doing anything even if the diff contains injection; it is a screening layer on top of the deterministic bash gates, never the sole gate. See COE-2026-07-13-transcript-cron-injection-exposure.md.",
+  "permissions": {
+    "deny": [
+      "Bash",
+      "Edit",
+      "Write",
+      "NotebookEdit",
+      "WebFetch",
+      "WebSearch",
+      "Read(~/.config/**)",
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)",
+      "Read(~/.netrc)",
+      "Read(~/Library/**)",
+      "Read(~/.plaud/**)",
+      "Read(~/.gmail-mcp/**)",
+      "mcp__gdrive__*",
+      "mcp__gmail-luthien__*",
+      "mcp__gmail-sw4__*",
+      "mcp__gmail-sw3__*",
+      "mcp__trello__*",
+      "mcp__trello-official__*",
+      "mcp__slack__*",
+      "mcp__otter__*",
+      "mcp__figma__*",
+      "mcp__plaud__*"
+    ]
+  }
+}
