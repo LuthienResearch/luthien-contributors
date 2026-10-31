@@ -16,6 +16,7 @@ These are generated copies of private files, with a small set of cuts (personal 
 - [`call-agendas-and-notes/agenda-style-corpus.md`](call-agendas-and-notes/agenda-style-corpus.md): Agenda and discussion-topics format rules and authorship heuristics (the verbatim example entries stay private).
 - [`meeting-notes-conventions.md`](meeting-notes-conventions.md): Standard structure for Luthien meeting notes: key takeaways, action items, transcript sources.
 - [`debrief-publishing-design.md`](debrief-publishing-design.md): How debriefs reach collaborators in Slack as drafts Scott sends (Beeper prefill script).
+- [`scott-claude-md.md`](scott-claude-md.md): Scott's CLAUDE.md: the always-loaded rules for his Claude Code sessions.
 - [`skills/share-debrief/SKILL.md`](skills/share-debrief/SKILL.md): Skill: publish a debrief to Slack as a prefilled draft.
 - [`skills/standup-prep/SKILL.md`](skills/standup-prep/SKILL.md): Skill: prep Scott's two standup updates, each for its own audience.
 - [`skills/standup-prep/requirements.md`](skills/standup-prep/requirements.md): Requirements and retro behind the standup-prep skill.
