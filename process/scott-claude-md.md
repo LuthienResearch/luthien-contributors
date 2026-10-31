@@ -23,7 +23,7 @@ Sidecars (load on demand): [`claude-md-changelog.md`](claude-md-changelog.md) (r
 
 **Luthien: fetch, don't assume.** [luthienresearch.org](https://luthienresearch.org) · [Who can see what](https://github.com/LuthienResearch/luthien-contributors/blob/main/README.md#who-can-see-what-access-levels) · [luthien-org README](https://github.com/LuthienResearch/luthien-org/blob/main/README.md)
 
-- **The nonprofit is not Luthien.** Its legal name is Seattle Network for AI Alignment Problem Solving; never label it "Luthien".
+- **The nonprofit is not Luthien.** Its legal name is Seattle Network for AI Alignment Problem Solving, and it's operating as [Separatrix](https://separatrix.ai/); never label it "Luthien".
 
 **Long-term goal.** Increase my technical versatility while staying true to my strengths (user empathy, systems thinking, rallying people). AI is blurring job families. I want to be a PM who can build, not just spec.
 
