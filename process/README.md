@@ -1,6 +1,6 @@
 # Process docs
 
-> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy.
+> Generated from Scott Wofford's private docs on 2026-11-02 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy.
 
 Scott's working process for meetings, transcripts, standups and Claude behavior, published so contributors can read and reuse it. Scott's full Claude Code configuration (CLAUDE.md) is published separately at [scottwofford.com](https://scottwofford.com/building/claude-code-config.html).
 
@@ -11,6 +11,7 @@ These are generated copies of private files, with a small set of cuts (personal 
 - [`transcripts/_merged/README.md`](transcripts/_merged/README.md): Rules for merged masters that reconcile more than one capture of a conversation: header schema and merge checklist.
 - [`requirements/scott-response-req.md`](requirements/scott-response-req.md): Full bodies of Scott's 14 response requirements (R1-R14) and tenets; the one-line index is on scottwofford.com.
 - [`requirements/cross-surface-context-mgmt-req.md`](requirements/cross-surface-context-mgmt-req.md): Cross-surface context requirements (continuity, verify before asserting, loaded-context introspection) and the surface capability matrix.
+- [`requirements/scott-writing-process.md`](requirements/scott-writing-process.md): Scott's writing process, canonical doc: the Step 0 decision-vs-draft gate, the five steps with their incidents, red flags, and how Claude helps; the skill below is its runtime distillation.
 - [`call-agendas-and-notes/call-lifecycle-rules.md`](call-agendas-and-notes/call-lifecycle-rules.md): Behavior rules for the call lifecycle: meeting home, prep docs, raw notes, debriefs, action items. Renamed from CLAUDE.md so no agent auto-loads it here.
 - [`call-agendas-and-notes/README.md`](call-agendas-and-notes/README.md): Format reference for call prep and debriefs: folder layout, filenames, debrief sections.
 - [`call-agendas-and-notes/agenda-style-corpus.md`](call-agendas-and-notes/agenda-style-corpus.md): Agenda and discussion-topics format rules and authorship heuristics (the verbatim example entries stay private).
