@@ -3,7 +3,7 @@ name: standup-prep
 description: Prep Scott's update for any recurring team meeting, written for that meeting's audience - for example the Control Tower Standup (prepped in his "standup Scott's raw notes" Google Doc) or the Control Tooling Sync (prepped in its agenda doc). Use when Scott says "prep for standup", "ct standup", "standup raw", "help me fill out standup", "what should I ask in standup", "summarize what I worked on since last standup", "standup update", "prep for control tooling sync", "update my bullets in the sync doc", "agenda for the sync", or asks to open today's standup template.
 ---
 
-> Generated from Scott Wofford's private docs on 2026-10-31 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy. Source of truth: https://github.com/scottwofford/sw-prv/blob/main/skills/standup-prep/SKILL.md (private). This copy is a redacted mirror and may lag behind it.
+> Generated from Scott Wofford's private docs on 2026-11-02 by an export script. Do not edit here; edits are overwritten. Scott's agents never read this copy. Source of truth: https://github.com/scottwofford/sw-prv/blob/main/skills/standup-prep/SKILL.md (private). This copy is a redacted mirror and may lag behind it.
 
 # Recurring-meeting prep
 
