@@ -11,13 +11,13 @@ These are generated copies of private files, with a small set of cuts (personal 
 - [`transcripts/_merged/README.md`](transcripts/_merged/README.md): Rules for merged masters that reconcile more than one capture of a conversation: header schema and merge checklist.
 - [`requirements/scott-response-req.md`](requirements/scott-response-req.md): Full bodies of Scott's 14 response requirements (R1-R14) and tenets; the one-line index is on scottwofford.com.
 - [`requirements/cross-surface-context-mgmt-req.md`](requirements/cross-surface-context-mgmt-req.md): Cross-surface context requirements (continuity, verify before asserting, loaded-context introspection) and the surface capability matrix.
-- [`requirements/scott-writing-process.md`](requirements/scott-writing-process.md): Scott's writing process, canonical doc: the Step 0 decision-vs-draft gate, the five steps with their incidents, red flags, and how Claude helps; the skill below is its runtime distillation.
 - [`call-agendas-and-notes/call-lifecycle-rules.md`](call-agendas-and-notes/call-lifecycle-rules.md): Behavior rules for the call lifecycle: meeting home, prep docs, raw notes, debriefs, action items. Renamed from CLAUDE.md so no agent auto-loads it here.
 - [`call-agendas-and-notes/README.md`](call-agendas-and-notes/README.md): Format reference for call prep and debriefs: folder layout, filenames, debrief sections.
 - [`call-agendas-and-notes/agenda-style-corpus.md`](call-agendas-and-notes/agenda-style-corpus.md): Agenda and discussion-topics format rules and authorship heuristics (the verbatim example entries stay private).
 - [`meeting-notes-conventions.md`](meeting-notes-conventions.md): Standard structure for Luthien meeting notes: key takeaways, action items, transcript sources.
 - [`debrief-publishing-design.md`](debrief-publishing-design.md): How debriefs reach collaborators in Slack as drafts Scott sends (Beeper prefill script).
 - [`scott-claude-md.md`](scott-claude-md.md): Scott's CLAUDE.md: the always-loaded rules for his Claude Code sessions.
+- [`scott-writing-process.md`](scott-writing-process.md): Scott's writing process, canonical doc: the Step 0 decision-vs-draft gate, the five steps with their incidents, red flags, and how Claude helps; the scotts-writing-process skill below is its runtime distillation.
 - [`skills/share-debrief/SKILL.md`](skills/share-debrief/SKILL.md): Skill: publish a debrief to Slack as a prefilled draft.
 - [`skills/standup-prep/SKILL.md`](skills/standup-prep/SKILL.md): Skill: prep Scott's two standup updates, each for its own audience.
 - [`skills/standup-prep/requirements.md`](skills/standup-prep/requirements.md): Requirements and retro behind the standup-prep skill.
