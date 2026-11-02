@@ -1,4 +1,4 @@
-"""Async daily standup: the bot posts three questions each weekday morning.
+"""Async weekly standup: the bot posts three questions each Monday morning.
 
 People answer in the thread under the post, on days they worked on Luthien.
 There is no meeting; blockers get picked up in the thread.
@@ -22,14 +22,13 @@ QUESTIONS = (
 
 
 def next_run(now: datetime) -> datetime:
-    """The next weekday (Mon to Fri) at POST_AT, strictly after `now`."""
+    """The next Monday at POST_AT, strictly after `now`."""
     now = now.astimezone(TZ)
     candidate = datetime.combine(now.date(), POST_AT, tzinfo=TZ)
     if candidate <= now:
         candidate += timedelta(days=1)
-    # Skip Saturday (5) and Sunday (6).
-    while candidate.weekday() >= 5:
-        candidate += timedelta(days=1)
+    # Advance to the next Monday (weekday 0); already-Monday stays put.
+    candidate += timedelta(days=(7 - candidate.weekday()) % 7)
     return candidate
 
 

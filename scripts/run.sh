@@ -18,6 +18,6 @@ export ANTHROPIC_API_KEY="$(read_secret anthropic-api-key)"
 
 # The brain is a contributors-level repo, separate from luthien-org (see README).
 export BRAIN_DIR="${BRAIN_DIR:-$HOME/build/luthien-contributors-brain}"
-# Daily async standup in #luthien-contributors (set STANDUP_CHANNEL_ID= to turn off).
+# Weekly async standup in #luthien-contributors (set STANDUP_CHANNEL_ID= to turn off).
 export STANDUP_CHANNEL_ID="${STANDUP_CHANNEL_ID-C0APTJLNWN6}"
 exec uv run python -m agent.app

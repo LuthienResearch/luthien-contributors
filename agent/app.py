@@ -130,7 +130,7 @@ async def on_deny(ack, body, action):
 async def main():
     auth = await app.client.auth_test()
     BOT.update(user_id=auth["user_id"], team_id=auth["team_id"])
-    # Daily async standup post, if a channel is configured.
+    # Weekly async standup post, if a channel is configured.
     if channel := os.environ.get("STANDUP_CHANNEL_ID"):
         asyncio.create_task(standup.run_forever(app.client, channel))
     await AsyncSocketModeHandler(app, os.environ["SLACK_APP_TOKEN"]).start_async()
