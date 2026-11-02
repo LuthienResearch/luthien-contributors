@@ -21,7 +21,7 @@ Requests often arrive minutes before or after the meeting starts.
 ## Steps
 
 0. **Control Tower Standup: first, before anything else, give Scott a section to draft in.** Copy the [template](https://docs.google.com/document/d/1uxHTW1vRd8bWG806BKt9Laoz3wroC89BEdgwEzxg-eo/edit?tab=t.0#heading=h.9n80tyvpa3d6) to a new section titled with today's date (Heading 4, like `Oct 21`) at the top of the doc, unless today's section already exists, then open it in Chrome profile `Default`. Scott drafts there live while Claude does the full sweep below; from then on that section is his, so Claude's bullets go in chat.
-1. **Big picture ([writing process](https://github.com/scottwofford/sw-prv/blob/main/requirements/personal/scott-writing-process.md), one line per meeting, no hold point).** Name the audience and the goal: what Scott did and will do on *their* work, and the answers he needs from named people. If Scott states a goal for the meeting, that is the goal.
+1. **Big picture ([writing process](https://github.com/scottwofford/sw-prv/blob/main/process/scott-writing-process.md), one line per meeting, no hold point).** Name the audience and the goal: what Scott did and will do on *their* work, and the answers he needs from named people. If Scott states a goal for the meeting, that is the goal.
 2. **Gather since the last meeting** (in parallel):
    - Scott's previous entry for this meeting. Its Next becomes today's Last; open blockers carry over as "(still open from <date>)". For the sync, also the last [debrief](https://github.com/LuthienResearch/luthien-org/tree/main/call-agendas-and-notes/call-prep-agendas-debriefs/control-tooling-sync) and its open actions.
    - The last meeting's transcript or takeaways, to pre-answer questions so only real asks remain.

@@ -7,11 +7,11 @@ description: Scott's writing process. Use whenever drafting text Scott will past
 
 # Scott's Writing Process
 
-Canonical source: [`private-claude-code-docs/requirements/personal/scott-writing-process.md`](https://github.com/scottwofford/private-claude-code-docs/blob/main/requirements/personal/scott-writing-process.md). Public version: the [Writing](https://scottwofford.com/writing/) section on scottwofford.com; its specific pages are linked from the steps they inform below.
+Canonical source: [`sw-prv/process/scott-writing-process.md`](https://github.com/scottwofford/sw-prv/blob/main/process/scott-writing-process.md). Public version: the [Writing](https://scottwofford.com/writing/) section on scottwofford.com; its specific pages are linked from the steps they inform below.
 
 ## Sibling rules: when Claude AUTHORS (not assists) docs Scott will read
 
-This skill governs Claude *assisting* Scott's writing (Scott pastes/sends under his name). When Claude *authors* documents Scott will read end-to-end (canvases, verification reports, critiques, retrospectives, code, formatting), the binding rules are in [`requirements/personal/claude-writes-for-scott.md`](https://github.com/scottwofford/private-claude-code-docs/blob/main/requirements/personal/claude-writes-for-scott.md).
+This skill governs Claude *assisting* Scott's writing (Scott pastes/sends under his name). When Claude *authors* documents Scott will read end-to-end (canvases, verification reports, critiques, retrospectives, code, formatting), the binding rules are in [`requirements/personal/claude-writes-for-scott.md`](https://github.com/scottwofford/sw-prv/blob/main/requirements/personal/claude-writes-for-scott.md).
 
 **Headline rule from the 2026-06-08 retrospective:** Claude does NOT author strategic-synthesis prose (pivot recommendations, decision memos, frame-setting landscape narratives). Scott authors those using this writing process; Claude feeds them with canvases, primary-source verification, and adversarial critique. The v2-of-key-questions.md incident documented in that file is the load-bearing exemplar.
 
