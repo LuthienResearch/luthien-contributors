@@ -4,7 +4,7 @@
 
 Scott's working process for meetings, transcripts, standups and Claude behavior, published so contributors can read and reuse it. Scott's full Claude Code configuration (CLAUDE.md) is published separately at [scottwofford.com](https://scottwofford.com/building/claude-code-config.html).
 
-These are generated copies of private files, with a small set of cuts (personal life, pay and funding amounts, performance management, NDA material, things shared in confidence, and secrets). Links into private repos (`sw-prv`, `luthien-org`, `meeting-transcripts`) are kept to show the structure; they 404 for anyone without access, by design. The `.json` files can't carry a header comment, so this index is their generated-copy notice.
+These are generated copies of private files, with a small set of cuts (personal life, exact pay and funding figures (a dollar amount; "a few million" or "funding for my salary" stays in), performance management, NDA material, things shared in confidence, and secrets). Links into private repos (`sw-prv`, `luthien-org`, `meeting-transcripts`) are kept to show the structure; they 404 for anyone without access, by design. The `.json` files can't carry a header comment, so this index is their generated-copy notice.
 
 - [`transcripts/plaud/WORKFLOW.md`](transcripts/plaud/WORKFLOW.md): How call recordings (Plaud, Gemini, Otter) become authoritative transcripts: capture paths, pipeline, ingest pass, gotchas.
 - [`transcripts/README.md`](transcripts/README.md): Transcript storage layout, combining multiple captures of one call, naming, and the deletion/redaction runbook.
