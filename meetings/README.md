@@ -1,6 +1,6 @@
 # Example meetings
 
-Raw Google Meet captures from Luthien meetings, shared as worked examples of how we record and share meetings. Each entry links the recording and the Notes by Gemini doc (AI summary plus a speaker-labeled transcript). No edits or summaries: the raw content speaks for itself.
+Raw Google Meet captures from Luthien meetings, shared as worked examples of how we record and share meetings. Each entry links the recording and the Notes by Gemini doc (AI summary plus a speaker-labeled transcript). No edits or summaries: the raw content speaks for itself. Contributors meetings also get a merged, speaker-attributed transcript with transcription fixes in [`transcripts/`](../transcripts/README.md).
 
 Most meetings can be public. We keep a meeting private when it contains material on the exceptions list: exact pay or funding figures, NDA material, performance management, things shared in confidence, or unreleased security findings. Raw recordings can't have single lines cut, so an exception keeps the whole meeting private.
 
