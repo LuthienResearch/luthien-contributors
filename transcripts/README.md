@@ -2,7 +2,12 @@
 
 Merged, speaker-attributed transcripts of Luthien contributors meetings: meetings run for the contributors access level, such as contributor onboarding + Q&A. Each file combines every available capture of one meeting (Google Meet's Gemini transcript, Plaud, local Whisper) into a single transcript and records what the speech recognition got wrong.
 
-The recordings and Notes by Gemini docs for the same meetings are indexed in [`meetings/`](../meetings/README.md). A meeting with anything on the exceptions list there (exact pay or funding figures, NDA material, performance management, things shared in confidence, unreleased security findings) stays private and is not filed here.
+The recordings and Notes by Gemini docs for the same meetings are indexed in [`meetings/`](../meetings/README.md). When a meeting has anything on the exceptions list there (exact pay or funding figures, NDA material, performance management, things shared in confidence, unreleased security findings), cut those passages with `*[Redacted: <reason>.]*`, add a **Redactions:** line under the title, and leave out the recording and Notes by Gemini links (a recording can't have lines cut).
+
+| Date | Meeting | Transcript |
+|---|---|---|
+| Fri, Oct 23, 2026 | Luthien contributor onboarding + Q&A (redacted) | [2026-10-23_luthien-contributor-onboarding-qa.md](2026-10-23_luthien-contributor-onboarding-qa.md) |
+| Thu, Oct 29, 2026 | Luthien contributor onboarding + Q&A | [2026-10-29_luthien-contributor-onboarding-qa.md](2026-10-29_luthien-contributor-onboarding-qa.md) |
 
 ## File name
 
@@ -39,7 +44,9 @@ The recordings and Notes by Gemini docs for the same meetings are indexed in [`m
 
 ## Transcript
 
-**Jane Doe** [00:00:12]: ...
+### 00:00:12
+
+**Jane Doe:** ...
 ```
 
 Rules:
@@ -47,4 +54,4 @@ Rules:
 - **Real names on every turn.** Resolve `Speaker N` labels using the Gemini names, Plaud's label for Scott, and context. If a speaker can't be identified, name them by role ("Attendee 3") and list them under Uncertainties.
 - **Mark fixes inline too.** Each fix in the body carries `[was: <heard text>]` right after the corrected words, so a reader sees it in place.
 - **Use only the Gemini Transcript tab.** The Notes and summary tabs are paraphrases, never a source for wording.
-- **The body is verbatim.** Annotations go in `[brackets, italic]`. Summaries and action items do not go in this file.
+- **The body is verbatim.** Annotations go in `*[brackets, italic]*`. Summaries and action items do not go in this file.
