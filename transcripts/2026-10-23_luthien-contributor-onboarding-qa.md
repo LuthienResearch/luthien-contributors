@@ -24,6 +24,7 @@
 |---|---|---|---|
 | 00:00:15 | "Jay" (Gemini) | Jai | Jai Dhyani, Luthien co-founder (now on Separatrix) |
 | 00:03:43 | "Equestamp" (Gemini) | EquiStamp | partner's own spelling |
+| 00:06:46 | "12week" (Gemini) | 12-week | context |
 | 00:10:09 | "Paulo" (Gemini) | Paolo | Paolo Calvi's Meet account name |
 | 00:10:09 | "Alistar" (Gemini) | Allister | Allister Lundberg's Meet account name |
 | 00:15:52 | "Curl" (Gemini) | Kirill | Kirill Novikov, named with Paul for the sandbox idea |
@@ -85,7 +86,7 @@
 
 ### 00:06:46
 
-**Scott Wofford:** *[Redacted: partner's non-public plans.]*
+**Scott Wofford:** But at a high level, they'd be interested in a um 12-week [was: 12week] subcontract for um the things I'm about to mention. *[Redacted: partner's non-public plans.]*
 
 ### 00:08:25
 
