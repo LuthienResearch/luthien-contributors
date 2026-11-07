@@ -16,7 +16,7 @@ Luthien has three access levels. Each one has a Slack channel, and GitHub and Go
 |---|---|---|---|---|
 | **Leads** | Day-to-day coordination for the people actively driving Luthien strategy, funding applications, client engagements (e.g., Faculty, Redwood) and core processes (hiring, project brief mechanisms). | #luthien-leads (private) | luthien-org (private) | Not set up yet |
 | **Core** | Close collaborators and trusted voices. Deeper discussion on direction and decisions; join in as much or as little as your time allows. | #luthien-core (private) | luthien-org (private) | core@ |
-| **Contributors** | Open to anyone working on Luthien or interested in getting involved. Updates, questions, and ways to help. | [#luthien-contributors](https://seattleaisafety.slack.com/archives/C0APTJLNWN6) (public channel in the Seattle AI Safety Slack) | [luthien-proxy](https://github.com/LuthienResearch/luthien-proxy), this repo (both public; write access on invite) | Docs shared as "anyone with the link can view"; contributors@ is being set up |
+| **Contributors** | Open to anyone working on Luthien or interested in getting involved. Updates, questions, and ways to help. | [#luthien-contributors](https://seattleaisafety.slack.com/archives/C0APTJLNWN6) (public channel in the Seattle AI Safety Slack) | [luthien-proxy](https://github.com/LuthienResearch/luthien-proxy), this repo (both public; write access on invite) | Shared with the contributors@luthienresearch.org Google Group (join via step 5 below) |
 
 Contributors-level material is effectively public: anyone with the link can read it, and invited people can write. [luthien.cc](https://luthien.cc) is public too.
 
@@ -28,6 +28,7 @@ Leads and core currently share luthien-org on GitHub; it will be split so that e
 2. Read the [Luthien Project Briefs](https://docs.google.com/document/d/1RYgVMUhNh_3Wpkapg-8WHlj1hJdbxa1aGzlCpRHyWoc/edit) and pick one that fits your skills and time.
 3. Post in #luthien-contributors which brief you picked, your top uncertainty, and anything blocking you.
 4. For code, start with [luthien-proxy](https://github.com/LuthienResearch/luthien-proxy). Ask in the channel for write access.
+5. To get contributor-call invites and access to recordings, ask to join contributors@luthienresearch.org: send Scott a Slack DM with your name, a link where we can learn about you (LinkedIn, GitHub or website), the brief you're considering, and the email address to add.
 
 ### Two teams
 
