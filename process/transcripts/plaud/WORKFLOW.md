@@ -20,7 +20,7 @@ Each path is an *input*, not a finished transcript. All three yield Plaud's stru
 
 ### 1. Zapier path (auto, real-time) — the default
 
-Plaud finishes a recording, Zapier mirrors it to [Drive `2.2 Transcripts/Plaud transcripts/`](https://drive.google.com/drive/folders/1KXmNaAo7a2IFS00HjW86saPxRWogxPte), rclone one-way-copies it to local disk `~/build/sw3-google-drive/drive/2.2 Transcripts/Plaud transcripts/`. Each recording is one extensionless file named `<auto-title> <YYYY-MM-DD HH:MM:SS>`, body = `Speaker N HH:MM:SS` blocks. Live since 2026-05-07.
+Plaud finishes a recording, Zapier mirrors it to Drive `2.2 Transcripts/Plaud transcripts/` (Scott's private Drive, not shared), rclone one-way-copies it to local disk `~/build/sw3-google-drive/drive/2.2 Transcripts/Plaud transcripts/`. Each recording is one extensionless file named `<auto-title> <YYYY-MM-DD HH:MM:SS>`, body = `Speaker N HH:MM:SS` blocks. Live since 2026-05-07.
 
 - **Pro:** zero effort; on disk within the sync interval, no manual export; Claude Code reads it directly.
 - **Con:** no real names (generic `Speaker N`); content-based auto-title frozen at Zap time (later web-UI renames never reach the mirror).
@@ -188,7 +188,7 @@ Simple case, for contrast: a Plaud-only call that just needs `Speaker N` resolve
 
 - Cross-source merges (Plaud + Gemini + SuperWhisper + Otter): [`transcripts/README.md` -> Combining multiple sources](https://github.com/scottwofford/sw-prv/blob/main/transcripts/README.md#combining-multiple-sources-into-one-transcript)
 - Storage + naming: [`transcripts/README.md`](https://github.com/scottwofford/sw-prv/blob/main/transcripts/README.md)
-- [Drive `2.2 Transcripts/Plaud transcripts/` folder](https://drive.google.com/drive/folders/1KXmNaAo7a2IFS00HjW86saPxRWogxPte) (Zapier destination; renamed from `2.2 Plaud` on 2026-07-12, same folder ID; syncs to `~/build/sw3-google-drive/drive/2.2 Transcripts/Plaud transcripts/`)
+- Drive `2.2 Transcripts/Plaud transcripts/` folder (Scott's private Drive, not shared) (Zapier destination; renamed from `2.2 Plaud` on 2026-07-12, same folder ID; syncs to `~/build/sw3-google-drive/drive/2.2 Transcripts/Plaud transcripts/`)
 - [Plaud bulk-downloads folder](https://drive.google.com/drive/folders/1o8cfZLmdZzrr0Pz4ExUxpidje-0I7ETy)
 - [scottwofford/drive-sync](https://github.com/scottwofford/drive-sync) (rclone throttle fixes)
 

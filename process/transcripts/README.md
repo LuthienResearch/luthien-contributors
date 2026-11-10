@@ -125,7 +125,7 @@ A transcript can exist in up to five storage layers, each with different permane
 |---|---|---|---|
 | Repo file | `transcripts/**/<file>.md` (working tree) | yes | `git rm <file> && git commit` |
 | Git history | every past commit that touched the file | **no** | `git filter-repo` runbook below (rewrites history) |
-| Drive raw | the Zapier-forwarded original in [`2.2 Transcripts/Plaud transcripts/`](https://drive.google.com/drive/folders/1KXmNaAo7a2IFS00HjW86saPxRWogxPte) | no (independent of the repo) | trash the file in Drive, then empty Drive trash |
+| Drive raw | the Zapier-forwarded original in `2.2 Transcripts/Plaud transcripts/` (Scott's private Drive, not shared) | no (independent of the repo) | trash the file in Drive, then empty Drive trash |
 | Drive mirror | the generated Doc in the `Transcript Masters` folder | no (regenerated separately) | trash the Doc in Drive + empty trash, and remove its entry from [`transcripts/.mirror-map.json`](https://github.com/scottwofford/sw-prv/blob/main/transcripts/.mirror-map.json) so the renderer doesn't treat it as live |
 | Disk mirror | `~/build/sw3-google-drive/drive/2.2 Transcripts/Plaud transcripts/<raw>` | no | delete the Drive raw **first** (else `rclone copy` re-downloads it), then delete the disk copy. `rclone copy` is one-way and does not delete disk files when the Drive source disappears, so the disk copy must be removed by hand |
 
